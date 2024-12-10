@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     '@formkit/auto-animate',
     'dayjs-nuxt',
     'nuxt-lodash',
-    '@primevue/nuxt-module'
+    '@primevue/nuxt-module',
+    '@nuxt/eslint'
   ],
   primevue: {
     options: {
@@ -22,5 +23,12 @@ export default defineNuxtConfig({
         preset: Aura
       }
     }
+  },
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en-US' },
+      { code: 'zh', language: 'zh-CN' }
+    ],
+    defaultLocale: 'zh',
   }
 })
