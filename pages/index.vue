@@ -1,4 +1,7 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'default'
+})
 const route = useRoute()
 const items = ref([
   {
@@ -50,6 +53,6 @@ const items = ref([
 
 <template>
   <div>
-    <Menubar :model="items" />
+<!--    <Menubar :model="items" />-->
   </div>
 </template>
