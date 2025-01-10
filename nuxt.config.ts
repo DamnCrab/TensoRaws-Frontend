@@ -11,11 +11,15 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
-    '@formkit/auto-animate',
+    // '@formkit/auto-animate',
     'dayjs-nuxt',
-    'nuxt-lodash',
+    // 'nuxt-lodash',
     '@primevue/nuxt-module',
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    '@nuxt/content',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/color-mode',
   ],
   primevue: {
     options: {
@@ -30,5 +34,24 @@ export default defineNuxtConfig({
       { code: 'zh', language: 'zh-CN' }
     ],
     defaultLocale: 'zh',
-  }
+  },
+  content: {
+    documentDriven: true,
+    experimental: {
+      search: true
+    }
+  },
+  colorMode: {
+    classSuffix: ''
+  },
+  robots: {
+    blockAiBots: true,
+    disallow: ['/login', '/admin'],
+    allow: ['/index','/blog'],
+    blockNonSeoBots: true
+  },
+  site: {
+    url: 'https://TensoRaws.com',
+    name: 'TensoRaws'
+  },
 })
